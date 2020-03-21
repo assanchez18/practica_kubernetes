@@ -12,5 +12,5 @@ spec:
       paths:
       - path: /anuncios/
         backend:
-          serviceName: web-anuncios-service-prc
+          serviceName: sergiosanchezruiz-webanuncios-service-prc
           servicePort: 8080
