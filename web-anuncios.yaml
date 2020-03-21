@@ -1,15 +1,15 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: sergiosanchezruiz-webanuncios-prc
+  name: sergiosanchezruiz-webanuncios
 spec:
   selector:
     matchLabels:
-      app: sergiosanchezruiz-webanuncios-prc
+      app: sergiosanchezruiz-webanuncios
   template:
     metadata:
       labels:
-        app: sergiosanchezruiz-webanuncios-prc
+        app: sergiosanchezruiz-webanuncios
     spec:
       containers:
       - name: java
@@ -25,9 +25,9 @@ spec:
 apiVersion: v1
 kind: Service
 metadata:
-  name: sergiosanchezruiz-webanuncios-service-prc
+  name: sergiosanchezruiz-webanuncios-service
   labels:
-    app: sergiosanchezruiz-webanuncios-prc
+    app: sergiosanchezruiz-webanuncios
 spec:
   ports:
   - port: 8080
@@ -35,5 +35,5 @@ spec:
     protocol: TCP
     name: sergiosanchezruiz-webanuncios-port
   selector:
-    app: sergiosanchezruiz-webanuncios-prc
+    app: sergiosanchezruiz-webanuncios
   type: ClusterIP
