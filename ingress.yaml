@@ -1,0 +1,16 @@
+apiVersion: extensions/v1beta1
+kind: Ingress
+metadata:
+  name: codeurjc-ingress
+  annotations:
+    kubernetes.io/ingress.class: "nginx"      
+    nginx.ingress.kubernetes.io/rewrite-target: "/"
+spec:
+  rules:
+  - host: www.practica.com
+    http:
+      paths:
+      - path: /anuncios/
+        backend:
+          serviceName: web-anuncios-service-prc
+          servicePort: 8080
