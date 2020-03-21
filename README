@@ -1,0 +1,10 @@
+El despliegue para la verificación de la práctica, asumiendo que los ficheros yaml están en el path actual, es el siguiente:
+La base de datos se levanta bajo el nombre DB.
+Base de datos persistente:
+kubectl create -f db-persistence.yaml
+
+Web anuncios basada en la aplicación containerizada propuesta:
+kubectl create -f web-anuncios.yaml
+
+Ingress:
+kubectl create -f ingress.yaml

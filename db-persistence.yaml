@@ -33,7 +33,7 @@ spec:
           value: test
         ports:
         - containerPort: 3306
-          name: db
+          name: db-port
         volumeMounts:
         - name: db-persistent-storage
           mountPath: /var/lib/mysql
