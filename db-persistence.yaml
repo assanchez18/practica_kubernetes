@@ -7,7 +7,7 @@ spec:
   ports:
   - port: 3306
   selector:
-    app: db
+    app: sergiosanchezruiz-db
   type: ClusterIP
 ---
 apiVersion: apps/v1
@@ -17,11 +17,11 @@ metadata:
 spec:
   selector:
     matchLabels:
-      app: db
+      app: sergiosanchezruiz-db
   template:
     metadata:
       labels:
-        app: db
+        app: sergiosanchezruiz-db
     spec:
       containers:
       - name: mysql
